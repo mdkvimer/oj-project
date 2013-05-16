@@ -1,0 +1,178 @@
+</table><html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>ben_xiao_hai@CJLUBAK</title>
+	<link rel=stylesheet href='./template/bs/hoj.css' type='text/css'>
+</head>
+
+<body>
+	
+<script type="text/javascript" src="include/wz_jsgraphics.js"></script>
+<script type="text/javascript" src="include/pie.js"></script>
+<script language="javascript" type="text/javascript" src="include/jquery-latest.js"></script>
+    <script language="javascript" type="text/javascript" src="include/jquery.flot.js"></script>
+    <script type="text/javascript">
+$(function () {
+    var d1 = [];
+    var d2 = [];
+            d1.push([1279987200000, 11]);
+	            d2.push([1279987200000, 4]);
+	          //var d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
+
+    // a null signifies separate line segments
+    var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
+    
+  $.plot($("#submission"), [ 
+    {label:"Submit",data:d1,lines: { show: true }},
+    {label:"AC",data:d2,bars:{show:true}} ],{
+    
+        
+            xaxis: {
+              mode: "time"
+              //,    max:(new Date()).getTime()
+              //,min:(new Date()).getTime()-100*24*3600*1000
+            },
+        grid: {
+            backgroundColor: { colors: ["#fff", "#333"] }
+        }
+        });
+});
+      //alert((new Date()).getTime());
+</script>
+<div id="wrapper">
+	<div id=head>
+<h2><img id=logo src="template/bs/image/logo.png"><span class="red">CJLUBAK</span></h2>
+</div><!--end head-->
+<div id=subhead>
+	  <div id=menu class=navbar>
+	  		<a  class='btn'  href="./"><i class="icon-home"></i>
+		Home						
+		</a>
+		
+		<a  class='btn '  href="bbs.php">
+		<i class="icon-comment"></i>Web Board</a>
+		<a  class='btn ' href="problemset.php">
+		<i class="icon-question-sign"></i>ProblemSet</a>
+		
+	  <!-- <a  class='btn ' href="submitpage.php">
+		<i class="icon-pencil"></i>编辑器</a>
+		-->
+		<a  class='btn ' href="status.php">
+		<i class="icon-check"></i>Status</a>
+		
+		<a class='btn ' href="ranklist.php">
+		<i class="icon-signal"></i>Ranklist</a>
+		
+		<a class='btn '  href="contest.php">
+		<i class="icon-fire"></i>Contest</a>
+		
+		<a class='btn ' href="recent-contest.php">
+		<i class="icon-share"></i>Recent</a>
+		
+		<a class='btn ' href="faqs.php">
+                <i class="icon-info-sign"></i>F.A.Qs</a>
+		
+			</div><!--end menu-->
+<div id=profile >
+<script src="include/profile.php?1405311595" ></script>
+</div><!--end profile-->
+</div><!--end subhead-->
+<div id=broadcast class="container">
+<marquee id=broadcast scrollamount=1 direction=up scrolldelay=250 onMouseOver='this.stop()' onMouseOut='this.start()';>
+  <a href=submitpage.php?id=0&sid=1016>IDE测试</a></marquee>
+</div>
+<br>
+
+<div id=main>
+
+<center>
+<table class="table table-striped" id=statics width=70%>
+<caption>
+ben_xiao_hai--我是来切oj的<a href=mail.php?to_user=ben_xiao_hai>Mail</a></caption>
+<tr bgcolor=#D7EBFF><td width=15%>No.<td width=25% align=center>119<td width=70% align=center>Solved Problems List</tr>
+<tr bgcolor=#D7EBFF><td>Solved<td align=center><a href='status.php?user_id=ben_xiao_hai&jresult=4'>4</a>
+<td rowspan=14 align=center>
+<script language='javascript'>
+function p(id){document.write("<a href=problem.php?id="+id+">"+id+" </a>");}
+p(1000);p(1001);p(1002);p(1023);</script>
+<div id=submission style="width:600px;height:300px" ></div>
+
+  </td>
+</tr>
+<tr bgcolor=#D7EBFF><td>Submit<td align=center><a href='status.php?user_id=ben_xiao_hai'>11</a></tr>
+<tr bgcolor=#D7EBFF><td>AC<td align=center><a href=status.php?user_id=ben_xiao_hai&jresult=4 >4</a></tr><tr bgcolor=#D7EBFF><td>WA<td align=center><a href=status.php?user_id=ben_xiao_hai&jresult=6 >6</a></tr><tr bgcolor=#D7EBFF><td>CE<td align=center><a href=status.php?user_id=ben_xiao_hai&jresult=11 >1</a></tr><tr id=pie bgcolor=#D7EBFF><td>Statistics<td><div id='PieDiv' style='position:relative;height:105px;width:120px;'></div></tr><script language="javascript">
+	var y= new Array ();
+	var x = new Array ();
+	var dt=document.getElementById("statics");
+	var data=dt.rows;
+	var n;
+	for(var i=3;dt.rows[i].id!="pie";i++){
+			n=dt.rows[i].cells[0];
+			n=n.innerText || n.textContent;
+			x.push(n);
+			n=dt.rows[i].cells[1].firstChild;
+			n=n.innerText || n.textContent;
+			//alert(n);
+			n=parseInt(n);
+			y.push(n);
+	}
+	var mypie=  new Pie("PieDiv");
+	mypie.drawPie(y,x);
+	//mypie.clearPie();
+
+</script> 
+
+
+<tr bgcolor=#D7EBFF><td>School:<td align=center></tr>
+<tr bgcolor=#D7EBFF><td>Email:<td align=center></tr>
+</table>
+<table border=1><tr class=toprow><td>UserID<td>Password<td>IP<td>Time</tr>
+	 <tbody>
+			<tr class='evenrow'><td>	ben_xiao_hai</td><td>	����TS�{</td><td>	210.32.27.33</td><td>	2010-07-25 15:09:31</td></tr><tr class='oddrow'><td>	ben_xiao_hai</td><td>	����TS�{</td><td>	210.32.27.33</td><td>	2010-07-25 14:21:05</td></tr><tr class='evenrow'><td>	ben_xiao_hai</td><td>	����TS�{</td><td>	210.32.27.33</td><td>	2010-07-25 12:15:31</td></tr>			</tbody>
+			</table>
+	 </center>
+<div id=foot>
+	<center>
+	<p>
+			<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa></a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<br>
+		
+	
+		Anything about the Problems, Please Contact Admin:<a href="mailto:root@localhost">admin</a>
+		
+		<script type="text/javascript" charset="utf-8">
+		(function(){
+		  var _w = 86 , _h = 50;
+		  var param = {
+			url:location.href,
+			type:'6',
+			count:'1', /**是否显示分享数，1显示(可选)*/
+			appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+			title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+			pic:'', /**分享图片的路径(可选)*/
+			ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+			language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+			rnd:new Date().valueOf()
+		  }
+		  var temp = [];
+		  for( var p in param ){
+			temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+		  }
+		  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+		})()
+	</script>
+		<br>
+		All Copyright Reserved 2010-2013 <a href='./'>CJLUBAK</a> TEAM<br>
+		<a href=gpl-2.0.txt><span class=green>GPL2.0</span></a> 2003-2013 <a href='http://code.google.com/p/hustoj/'>HUSTOJ Project</a> TEAM<br>
+		
+     	
+	</p>
+</center>
+
+</div><!--end foot-->
+</div><!--end main-->
+</div><!--end wrapper-->
+</body>
+</html>

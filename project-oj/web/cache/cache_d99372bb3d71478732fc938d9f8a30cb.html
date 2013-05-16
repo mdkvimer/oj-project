@@ -1,0 +1,168 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv='refresh' content='60'>
+	<title>Status</title>
+	<link rel=stylesheet href='./template/bs/hoj.css' type='text/css'>
+</head>
+<body>
+<div id="wrapper">
+	<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='./include/hoj.css' type='text/css'>
+</head>
+<table width=100% class=toprow><tr align=center>
+	<td width=15%><a class=hd href='./'>Home</a>
+	<td width=15%><a class=hd href='./bbs.php?cid=1042'>Web Board</a>
+	<td width=15%><a class=hd href='./contest.php?cid=1042'>ProblemSet</a>
+	<td width=15%><a class=hd href='./contestrank.php?cid=1042'>Standing</a>
+	<td width=15%><a class=hd href='./status.php?cid=1042'>Status</a>
+	<td width=15%><a class=hd href='./conteststatistics.php?cid=1042'>Statistics</a>
+</tr></table>
+<div id=broadcast>
+<marquee id=broadcast scrollamount=1 direction=up scrolldelay=250 onMouseOver='this.stop()' onMouseOut='this.start()';>
+  <a href=submitpage.php?id=0&sid=1016></a></marquee>
+</div><!--end broadcast-->
+<div id=main>
+
+
+
+<div id=center>
+<form id=simform action="status.php" method="get">
+Problem ID:<input class="input-small" style="height:24px" type=text size=4 name=problem_id value=''>
+User:<input  class="input-mini" style="height:24px" type=text size=4 name=user_id value=''>
+<input type='hidden' name='cid' value='1042'>Language:<select  class="input-small"  size="1" name="language">
+<option value='-1' selected>All</option><option value=0>C</option><option value=1>C++</option><option value=2>Pascal</option><option value=3>Java</option><option value=4>Ruby</option><option value=5>Bash</option><option value=6>Python</option><option value=7>PHP</option><option value=8>Perl</option><option value=9>C#</option></select>
+Result:<select class="input-small"  size="1" name="jresult">
+<option value='-1' selected>All</option><option value='4'>Accepted</option><option value='5'>Presentation Error</option><option value='6'>Wrong Answer</option><option value='7'>Time Limit Exceed</option><option value='8'>Memory Limit Exceed</option><option value='9'>Output Limit Exceed</option><option value='10'>Runtime Error</option><option value='11'>Compile Error</option><option value='0'>Pending</option><option value='1'>Pending Rejudging</option><option value='2'>Compiling</option><option value='3'>Running & Judging</option></select></select>
+
+SIM:
+                        <select name=showsim onchange="document.getElementById('simform').submit();">
+                        <option value=0 selected>All</option>
+                        <option value=50 >50</option>
+                        <option value=60 >60</option>
+                        <option value=70 >70</option>
+                        <option value=80 >80</option>
+                        <option value=90 >90</option>
+                        <option value=100 >100</option>
+                  </select><input class=btn type=submit value='Search' /></form></div>
+
+<div id=center>
+<table id=result-tab class="table table-striped content-box-header" align=center width=80%>
+<thead>
+<tr  class='success toprow'>
+<th >RunID<th >User<th >Problem<th >Result<th >Memory<th >Time<th >Language<th >Code Length<th >Submit Time</tr>
+</thead>
+
+<tbody>
+			<tr><td>	22038</td><td>	<a href='contestrank.php?cid=1042&user_id=fuck_the_dream#fuck_the_dream'>fuck_the_dream</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=4'>E</div></a></td><td>	<span class='btn btn-warning'>Time Limit Exceed</span></td><td>	<div id=center class=red>872</div></td><td>	<div id=center class=red>1000</div></td><td>	<a target=_blank href=showsource.php?id=22038>C</a>/<a target=_self href="submitpage.php?cid=1042&pid=4&sid=22038">Edit</a></td><td>	821 B</td><td>	2012-07-13 16:59:59</td></tr><tr><td>	22037</td><td>	<a href='contestrank.php?cid=1042&user_id=110030310339#110030310339'>110030310339</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='reinfo.php?sid=22037' class='btn btn-danger'>Wrong Answer</a></td><td>	<div id=center class=red>1356</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22037>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22037">Edit</a></td><td>	1130 B</td><td>	2012-07-13 16:58:42</td></tr><tr><td>	22036</td><td>	<a href='contestrank.php?cid=1042&user_id=110030312100#110030312100'>110030312100</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='reinfo.php?sid=22036' class='btn btn-warning'>Runtime Error</a></td><td>	<div id=center class=red>1360</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22036>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22036">Edit</a></td><td>	1172 B</td><td>	2012-07-13 16:57:27</td></tr><tr><td>	22035</td><td>	<a href='contestrank.php?cid=1042&user_id=110030310339#110030310339'>110030310339</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=1'>B</div></a></td><td>	<a href='reinfo.php?sid=22035' class='btn btn-danger'>Wrong Answer</a></td><td>	<div id=center class=red>1356</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22035>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=1&sid=22035">Edit</a></td><td>	791 B</td><td>	2012-07-13 16:54:27</td></tr><tr><td>	22034</td><td>	<a href='contestrank.php?cid=1042&user_id=fuck_the_dream#fuck_the_dream'>fuck_the_dream</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=4'>E</div></a></td><td>	<span class='btn btn-warning'>Time Limit Exceed</span></td><td>	<div id=center class=red>1360</div></td><td>	<div id=center class=red>1000</div></td><td>	<a target=_blank href=showsource.php?id=22034>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=4&sid=22034">Edit</a></td><td>	861 B</td><td>	2012-07-13 16:53:31</td></tr><tr><td>	22033</td><td>	<a href='contestrank.php?cid=1042&user_id=1100301228#1100301228'>1100301228</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='ceinfo.php?sid=22033' class='btn btn-warning'>Compile Error(Click)</a></td><td>	<div id=center class=red>0</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22033>C</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22033">Edit</a></td><td>	500 B</td><td>	2012-07-13 16:53:08</td></tr><tr><td>	22032</td><td>	<a href='contestrank.php?cid=1042&user_id=110030312100#110030312100'>110030312100</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='reinfo.php?sid=22032' class='btn btn-warning'>Runtime Error</a></td><td>	<div id=center class=red>1360</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22032>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22032">Edit</a></td><td>	1173 B</td><td>	2012-07-13 16:52:55</td></tr><tr><td>	22031</td><td>	<a href='contestrank.php?cid=1042&user_id=diana22#diana22'>diana22</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=1'>B</div></a></td><td>	<span class='btn btn-success'>Accepted</span></td><td>	<div id=center class=red>1360</div></td><td>	<div id=center class=red>200</div></td><td>	<a target=_blank href=showsource.php?id=22031>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=1&sid=22031">Edit</a></td><td>	509 B</td><td>	2012-07-13 16:52:20</td></tr><tr><td>	22030</td><td>	<a href='contestrank.php?cid=1042&user_id=diana22#diana22'>diana22</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=1'>B</div></a></td><td>	<a href='reinfo.php?sid=22030' class='btn btn-danger'>Wrong Answer</a></td><td>	<div id=center class=red>1360</div></td><td>	<div id=center class=red>148</div></td><td>	<a target=_blank href=showsource.php?id=22030>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=1&sid=22030">Edit</a></td><td>	441 B</td><td>	2012-07-13 16:51:44</td></tr><tr><td>	22029</td><td>	<a href='contestrank.php?cid=1042&user_id=110030312100#110030312100'>110030312100</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='ceinfo.php?sid=22029' class='btn btn-warning'>Compile Error(Click)</a></td><td>	<div id=center class=red>0</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22029>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22029">Edit</a></td><td>	1150 B</td><td>	2012-07-13 16:51:36</td></tr><tr><td>	22028</td><td>	<a href='contestrank.php?cid=1042&user_id=110030312100#110030312100'>110030312100</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='reinfo.php?sid=22028' class='btn btn-warning'>Runtime Error</a></td><td>	<div id=center class=red>1360</div></td><td>	<div id=center class=red>4</div></td><td>	<a target=_blank href=showsource.php?id=22028>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22028">Edit</a></td><td>	1116 B</td><td>	2012-07-13 16:50:33</td></tr><tr><td>	22027</td><td>	<a href='contestrank.php?cid=1042&user_id=11H034160223#11H034160223'>11H034160223</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<span class='btn btn-warning'>Time Limit Exceed</span></td><td>	<div id=center class=red>1356</div></td><td>	<div id=center class=red>1000</div></td><td>	<a target=_blank href=showsource.php?id=22027>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22027">Edit</a></td><td>	815 B</td><td>	2012-07-13 16:49:46</td></tr><tr><td>	22026</td><td>	<a href='contestrank.php?cid=1042&user_id=110030312100#110030312100'>110030312100</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='ceinfo.php?sid=22026' class='btn btn-warning'>Compile Error(Click)</a></td><td>	<div id=center class=red>0</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22026>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22026">Edit</a></td><td>	1109 B</td><td>	2012-07-13 16:48:42</td></tr><tr><td>	22025</td><td>	<a href='contestrank.php?cid=1042&user_id=11H034160223#11H034160223'>11H034160223</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='reinfo.php?sid=22025' class='btn btn-danger'>Wrong Answer</a></td><td>	<div id=center class=red>1356</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22025>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22025">Edit</a></td><td>	874 B</td><td>	2012-07-13 16:48:09</td></tr><tr><td>	22024</td><td>	<a href='contestrank.php?cid=1042&user_id=110030312100#110030312100'>110030312100</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='ceinfo.php?sid=22024' class='btn btn-warning'>Compile Error(Click)</a></td><td>	<div id=center class=red>0</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22024>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22024">Edit</a></td><td>	1108 B</td><td>	2012-07-13 16:48:03</td></tr><tr><td>	22023</td><td>	<a href='contestrank.php?cid=1042&user_id=1100304110#1100304110'>1100304110</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=2'>C</div></a></td><td>	<a href='reinfo.php?sid=22023' class='btn btn-danger'>Wrong Answer</a></td><td>	<div id=center class=red>1928</div></td><td>	<div id=center class=red>8</div></td><td>	<a target=_blank href=showsource.php?id=22023>C</a>/<a target=_self href="submitpage.php?cid=1042&pid=2&sid=22023">Edit</a></td><td>	632 B</td><td>	2012-07-13 16:47:21</td></tr><tr><td>	22022</td><td>	<a href='contestrank.php?cid=1042&user_id=110030312100#110030312100'>110030312100</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='ceinfo.php?sid=22022' class='btn btn-warning'>Compile Error(Click)</a></td><td>	<div id=center class=red>0</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22022>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22022">Edit</a></td><td>	1088 B</td><td>	2012-07-13 16:47:01</td></tr><tr><td>	22021</td><td>	<a href='contestrank.php?cid=1042&user_id=110030310339#110030310339'>110030310339</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=3'>D</div></a></td><td>	<a href='reinfo.php?sid=22021' class='btn btn-danger'>Wrong Answer</a></td><td>	<div id=center class=red>1356</div></td><td>	<div id=center class=red>0</div></td><td>	<a target=_blank href=showsource.php?id=22021>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=3&sid=22021">Edit</a></td><td>	1130 B</td><td>	2012-07-13 16:45:32</td></tr><tr><td>	22020</td><td>	<a href='contestrank.php?cid=1042&user_id=fuck_the_dream#fuck_the_dream'>fuck_the_dream</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=5'>F</div></a></td><td>	<span class='btn btn-success'>Accepted</span></td><td>	<div id=center class=red>872</div></td><td>	<div id=center class=red>12</div></td><td>	<a target=_blank href=showsource.php?id=22020>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=5&sid=22020">Edit</a></td><td>	913 B</td><td>	2012-07-13 16:45:23</td></tr><tr><td>	22019</td><td>	<a href='contestrank.php?cid=1042&user_id=diana22#diana22'>diana22</a></td><td>	<div class=center><a href='problem.php?cid=1042&pid=1'>B</div></a></td><td>	<a href='reinfo.php?sid=22019' class='btn btn-danger'>Wrong Answer</a></td><td>	<div id=center class=red>1360</div></td><td>	<div id=center class=red>148</div></td><td>	<a target=_blank href=showsource.php?id=22019>C++</a>/<a target=_self href="submitpage.php?cid=1042&pid=1&sid=22019">Edit</a></td><td>	437 B</td><td>	2012-07-13 16:44:51</td></tr>			</tbody>
+</table>
+
+</div>
+<div id=center>
+[<a href=status.php?&cid=1042>Top</a>]&nbsp;&nbsp;[<a href=status.php?&cid=1042&top=22058>Previous Page</a>]&nbsp;&nbsp;[<a href=status.php?&cid=1042&top=22019&prevtop=22038>Next Page</a>]</div>
+
+
+
+<div id=foot>
+	<center>
+         <h2><img id=logo src=template/bs/image/logo_school.png></h2>      
+	<p>
+			<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa></a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<br>
+		
+	
+		Anything about the Problems, Please Contact Admin:<a href="mailto:root@localhost">admin</a>
+		
+		<script type="text/javascript" charset="utf-8">
+		(function(){
+		  var _w = 86 , _h = 50;
+		  var param = {
+			url:location.href,
+			type:'6',
+			count:'1', /**是否显示分享数，1显示(可选)*/
+			appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+			title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+			pic:'', /**分享图片的路径(可选)*/
+			ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+			language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+			rnd:new Date().valueOf()
+		  }
+		  var temp = [];
+		  for( var p in param ){
+			temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+		  }
+		  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+		})()
+	</script>
+		<br>
+		All Copyright Reserved 2010-2013 <a href='./'>CJLUBAK</a> TEAM<br>
+		<a href=gpl-2.0.txt><span class=green>GPL2.0</span></a> 2003-2013 <a href='http://code.google.com/p/hustoj/'>HUSTOJ Project</a> TEAM<br>
+		
+     	
+	</p>
+</center>
+
+</div><!--end foot-->
+</div><!--end main-->
+</div><!--end wrapper-->
+<script type="text/javascript">
+  var i=0;
+  var judge_result=['Pending','Pending Rejudging','Compiling','Running & Judging','Accepted','Presentation Error','Wrong Answer','Time Limit Exceed','Memory Limit Exceed','Output Limit Exceed','Runtime Error','Compile Error','Compile OK','Test Running Done',''];
+//alert(judge_result[0]);
+function findRow(solution_id){
+    var tb=window.document.getElementById('result-tab');
+     var rows=tb.rows;
+
+      for(var i=1;i<rows.length;i++){
+                var cell=rows[i].cells[0];
+//              alert(cell.innerHTML+solution_id);
+        if(cell.innerHTML==solution_id) return rows[i];
+      }
+}
+
+function fresh_result(solution_id)
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+     var tb=window.document.getElementById('result-tab');
+     var row=findRow(solution_id);
+     //alert(row);
+     var r=xmlhttp.responseText;
+     var ra=r.split(",");
+//     alert(r);
+//     alert(judge_result[r]);
+      var loader="<img width=18 src=image/loader.gif>";
+      row.cells[3].innerHTML="<span class='btn btn-warning'>"+judge_result[ra[0]]+"</span>"+loader;
+
+     row.cells[4].innerHTML=ra[1];
+     row.cells[5].innerHTML=ra[2];
+     if(ra[0]<4)
+        window.setTimeout("fresh_result("+solution_id+")",2000);
+     else
+        window.location.reload();
+
+    }
+  }
+xmlhttp.open("GET","status-ajax.php?solution_id="+solution_id,true);
+xmlhttp.send();
+}
+</script>
+
+</body>
+</html>
