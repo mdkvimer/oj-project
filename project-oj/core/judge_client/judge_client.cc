@@ -777,6 +777,30 @@ void _update_problem_mysql(int p_id) {
         if (mysql_real_query(conn, sql, strlen(sql)))
                 write_log(mysql_error(conn));
 }
+void update_user_integral(char * user_id, int pid,int sim)
+{
+    char sql[BUFFER_SIZE];
+    if(!sim){
+
+        sprintf(
+                        sql,"UPDATE `users` SET `integral`=`integral`+ 5 where `user_id`=\'%s\' and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4' and `user_id`=\'%s\')=0 and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4')<4",
+                user_id,pid,user_id,pid);
+        if (mysql_real_query(conn, sql, strlen(sql)))
+            write_log(mysql_error(conn));
+        
+        sprintf(
+                        sql,"UPDATE `users` SET `integral`=`integral`+ 3 where `user_id`=\'%s\' and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4' and `user_id`=\'%s\')=0 and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4')<7 and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4')>3",
+                user_id,pid,user_id,pid,pid);
+        if (mysql_real_query(conn, sql, strlen(sql)))
+            write_log(mysql_error(conn));
+
+        sprintf(
+                        sql,"UPDATE `users` SET `integral`=`integral`+ 1 where `user_id`=\'%s\' and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4' and `user_id`=\'%s\')=0 and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4')<11 and (SELECT count(DISTINCT `user_id`) FROM `solution` WHERE `problem_id`=\'%d\' AND `result`='4')>6",
+                user_id,pid,user_id,pid,pid);
+        if (mysql_real_query(conn, sql, strlen(sql)))
+            write_log(mysql_error(conn));
+    }
+}
 void update_problem(int pid) {
         if(http_judge){
                 _update_problem_http(pid);
@@ -1973,6 +1997,7 @@ int main(int argc, char** argv) {
 	if(DEBUG) printf("add diff info of %d..... \n",solution_id);
 	adddiffinfo(solution_id);
  }
+        update_user_integral(char * user_id, int pid,int sim);
         update_user(user_id);
         update_problem(p_id);
         clean_workdir(work_dir);
